@@ -1,11 +1,8 @@
-#include <stdio.h>  /* This line includes the standard input/output library,
-                       which is necessary for functions like printf and scanf. */
-#include <stdlib.h> /* This line includes the standard library,
-                       which provides functions for memory allocation,
-                       random number generation, and other utility functions. */
-#include <time.h>   /* This line includes the time library,
-                       which is used to work with time-related functions.
-                       in this code - for generate the random number generator with the current time */
+// to uderstand this see comments in EverydayAssignment1.c
+// we're doing the same thing here that we did there, but here we're doing it for like string
+#include <stdio.h>  
+#include <stdlib.h> 
+#include <time.h>
 
 int main()
 {
@@ -17,7 +14,7 @@ int main()
     int L = rand() % 8 + 3; // Random number between 3 and 10 
 
     // Generate the random alphanumeric string of the specified length(randomly)
-    char anshu[L + 1]; // +1 for the null character
+    char avi[L + 1]; // +1 for the null character
     char domain[] = "0123456789ABCDEF";
     /*  This line defines a character array called domain,
 	    which contains the characters '0' to '9' followed by 'A' to 'F'.
@@ -28,12 +25,12 @@ int main()
 	{
     	// Generate a random index to access a character from the charset
         int index = rand() % (sizeof(domain) - 1);
-        anshu[i] = domain[index];
+        avi[i] = domain[index];
     }
-    anshu[L] = '\0'; // Null terminator to indicate the end of the string
+    avi[L] = '\0'; // Null terminator to indicate the end of the string
 
     // Print the random alphanumeric string
-    printf("The Randomly Generated Alphanumeric Character is %s\n", anshu);
+    printf("The Randomly Generated Alphanumeric Character is %s\n", avi);
 
     return 0;
 }
